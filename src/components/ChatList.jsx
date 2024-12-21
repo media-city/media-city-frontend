@@ -2,16 +2,30 @@ import React from 'react'
 import './ChatList.css'
 
 const ChatList = () => {
-  const usersList = [{username: "Kanom Pung", picture: "/bread.jpg"}, {username: "Kanom Pung", picture: "/bread.jpg"}, {username: "Kanom Pung", picture: "/bread.jpg"}, {username: "Kanom Pung", picture: "/bread.jpg"}, {username: "Kanom Pung", picture: "/bread.jpg"}, {username: "Kanom Pung", picture: "/bread.jpg"}, {username: "Kanom Pung", picture: "/bread.jpg"}, {username: "Kanom Pung", picture: "/bread.jpg"}]
+  const usersList = [
+    {username: "Kanom Pung", picture: "/bread.jpg"},
+    {username: "Som Tam", picture: "/somtam.jpg"},
+    {username: "Pad Thai", picture: "/padthai.jpg"},
+    {username: "Kanom Pung", picture: "/bread.jpg"},
+    {username: "Som Tam", picture: "/somtam.jpg"},
+    {username: "Pad Thai", picture: "/padthai.jpg"},
+    {username: "Kanom Pung", picture: "/bread.jpg"},
+    {username: "Som Tam", picture: "/somtam.jpg"},
+    {username: "Pad Thai", picture: "/padthai.jpg"}
+  ]
   
   return (
-    <div className='chatlist'>
+    <div id='chatlist-container'>
+      <div className='chatlist-header'>
+        <input className='search-input' type="text" placeholder='Search'/>
+        {usersList.username}
+      </div>
       <ul>
         {usersList.map(user => (
-          <li key={Math.random()} className='chat'>
-            <img src={user.picture} />
-            <div className='username'>{user.username}</div>
-          </li>
+          <button key={Math.random()} className='chat'>
+            <img className='profilepic' src={user.picture} />
+            <h4 className='username'>{user.username}</h4>
+          </button>
         ))}
       </ul>
     </div>
