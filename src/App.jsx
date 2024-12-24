@@ -5,11 +5,14 @@ import ChatBox from './components/ChatBox'
 
 
 function App() {
+  const [selectedUser, setSelectedUser] = useState(null)
 
   return (
-    <div id='wrapper'>
-      <ChatList />
-      <ChatBox />
+    <div>
+      <div id='wrapper'>
+        <ChatList onSelectedUser={setSelectedUser} />
+        <ChatBox user={selectedUser} />
+      </div>
     </div>
   )
 }

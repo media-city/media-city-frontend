@@ -1,14 +1,8 @@
 import React from 'react'
 import './ChatList.css'
 
-const ChatList = () => {
+const ChatList = ({ onSelectedUser }) => {
   const usersList = [
-    {username: "Kanom Pung", picture: "/bread.jpg"},
-    {username: "Som Tam", picture: "/somtam.jpg"},
-    {username: "Pad Thai", picture: "/padthai.jpg"},
-    {username: "Kanom Pung", picture: "/bread.jpg"},
-    {username: "Som Tam", picture: "/somtam.jpg"},
-    {username: "Pad Thai", picture: "/padthai.jpg"},
     {username: "Kanom Pung", picture: "/bread.jpg"},
     {username: "Som Tam", picture: "/somtam.jpg"},
     {username: "Pad Thai", picture: "/padthai.jpg"}
@@ -21,8 +15,8 @@ const ChatList = () => {
         {usersList.username}
       </div>
       <ul>
-        {usersList.map(user => (
-          <button key={Math.random()} className='chat'>
+        {usersList.map((user) => (
+          <button key={user.username} className='chat' onClick={() => onSelectedUser(user.username)}>
             <img className='profilepic' src={user.picture} />
             <h4 className='username'>{user.username}</h4>
           </button>
