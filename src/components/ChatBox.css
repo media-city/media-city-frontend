@@ -47,3 +47,21 @@
 .message.other {
     align-self: flex-start;
 }
+
+.send-button {
+    width: 5%;
+    height: 40px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background: hsl(275 100% 50%);
+    color: white;
+}
+
+.send-button:active {
+    background: hsl(275 100% 30%);
+    color: hsl(0 0% 80%);
+}
+
+.message-input {
+    border-radius: 5px 0 0 5px;
+}

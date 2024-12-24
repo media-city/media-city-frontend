@@ -1,12 +1,7 @@
 import React from 'react'
 import './ChatList.css'
 
-const ChatList = ({ onSelectedUser }) => {
-  const usersList = [
-    {username: "Kanom Pung", picture: "/bread.jpg"},
-    {username: "Som Tam", picture: "/somtam.jpg"},
-    {username: "Pad Thai", picture: "/padthai.jpg"}
-  ]
+const ChatList = ({ usersList, onSelectedUser }) => {
   
   return (
     <div id='chatlist-container'>
