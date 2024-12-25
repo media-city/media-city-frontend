@@ -1,13 +1,14 @@
 import React from 'react'
 import './ChatList.css'
+import HamburgerMenu from './HamburgerMenu';
 
 const ChatList = ({ usersList, onSelectedUser }) => {
   
   return (
     <div id='chatlist-container'>
       <div className='chatlist-header'>
+        <HamburgerMenu />
         <input className='search-input' type="text" placeholder='Search'/>
-        {usersList.username}
       </div>
       <ul>
         {usersList.map((user) => (

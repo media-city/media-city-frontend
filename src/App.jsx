@@ -3,7 +3,6 @@ import './App.css'
 import ChatList from './components/Chatlist'
 import ChatBox from './components/ChatBox'
 
-
 function App() {
   const usersList = [
     {username: "Kanom Pung", picture: "/bread.jpg"},
