@@ -2,13 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import ChatList from './components/Chatlist'
 import ChatBox from './components/ChatBox'
+import { mockUsers } from './data/mockUsers'
 
 function App() {
-  const usersList = [
-    {username: "Kanom Pung", picture: "/bread.jpg"},
-    {username: "Som Tam", picture: "/somtam.jpg"},
-    {username: "Pad Thai", picture: "/padthai.jpg"}
-  ]
+  const usersList = mockUsers
 
   const messages = {
     "Kanom Pung": [
@@ -22,18 +19,22 @@ function App() {
       { sender: "Som Tam", text: "Just chilling, let's talk!" }
     ],
     "Pad Thai": [
-      { sender: "Pad Thai", text: "Good morning!" },
-      { sender: "You", text: "Good morning! How's your day?" },
-      { sender: "Pad Thai", text: "It's been awesome, just a little busy." }
+
     ]
   }
 
   const [selectedUser, setSelectedUser] = useState(null)
+  
+  const [search, setSearch] = useState("")
+
+  function handleSearch(e) {
+    setSearch(e.target.value)
+  }
 
   return (
     <div>
       <div id='wrapper'>
-        <ChatList usersList={usersList} onSelectedUser={setSelectedUser} />
+        <ChatList usersList={usersList} onSelectedUser={setSelectedUser} onSearch={handleSearch} search={search} />
         <ChatBox user={selectedUser} messages={messages} />
       </div>
     </div>

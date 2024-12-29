@@ -2,6 +2,9 @@ import React from 'react'
 import './ChatBox.css'
 
 const ChatBox = ({ user, messages}) => {
+    if (user == null) {
+        return
+    }
 
   return (
     <div id='chatbox-container'>
@@ -10,9 +13,7 @@ const ChatBox = ({ user, messages}) => {
         </div>
         <div className="chatbox">
                 {
-                    user == null
-                    ? null
-                    : messages[user].map((msg, index) => (
+                    messages[user].map((msg, index) => (
                         <div key={index} className={msg.sender == "You" ? "message me" : "message other"}>
                             {msg.text}
                         </div>

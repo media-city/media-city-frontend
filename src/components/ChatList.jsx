@@ -2,18 +2,18 @@ import React from 'react'
 import './ChatList.css'
 import HamburgerMenu from './HamburgerMenu';
 
-const ChatList = ({ usersList, onSelectedUser }) => {
+const ChatList = ({ usersList, onSelectedUser, onSearch, search }) => {
   
   return (
     <div id='chatlist-container'>
       <div className='chatlist-header'>
         <HamburgerMenu />
-        <input className='search-input' type="text" placeholder='Search'/>
+        <input className='searchbar' type="text" placeholder='Search' onChange={onSearch}/>
       </div>
       <ul>
-        {usersList.map((user) => (
-          <button key={user.username} className='chat' onClick={() => onSelectedUser(user.username)}>
-            <img className='profilepic' src={user.picture} />
+        {usersList.filter(user => user.username.toLowerCase().includes(search.toLowerCase())).map((user) => (
+          <button key={user.id} className='chat' onClick={() => onSelectedUser(user.username)}>
+            <img className='profilepic' src={user.picture != null ? user.picture : "./blankprofilepic.jpg"} />
             <h4 className='username'>{user.username}</h4>
           </button>
         ))}
