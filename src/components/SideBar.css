@@ -27,5 +27,13 @@
 }
 
 .sidebar .logoutbtn {
-    
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: hsl(0, 100%, 50%);
+    text-align: center;
+}
+
+.sidebar .logoutbtn:hover {
+    background: hsl(0, 100%, 30%);
 }
