@@ -47,8 +47,7 @@
   top: 0;
 }
 
-.searchbar,
-.message-input {
+.searchbar {
   width: 100%;
   height: 40px;
   color: white;
@@ -57,6 +56,7 @@
   border-radius: 5px;
   border: none;
   outline: none;
+  font-size: 16px;
 }
 
 input::placeholder {
