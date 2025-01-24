@@ -5,6 +5,10 @@ import HamburgerMenu from "./icons/HamburgerMenu";
 const ChatList = ({ usersList, onSelectedUser }) => {
   const [search, setSearch] = useState("");
 
+  const handleChange = (event) => {
+    setSearch(event.target.value);
+  };
+
   return (
     <div id="chatlist-container">
       <div className="chatlist-header">
@@ -13,7 +17,8 @@ const ChatList = ({ usersList, onSelectedUser }) => {
           className="searchbar"
           type="text"
           placeholder="Search"
-          onChange={(e) => setSearch(e.target.value)}
+          value={search}
+          onChange={handleChange}
         />
       </div>
       <ul>
