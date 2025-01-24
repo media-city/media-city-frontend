@@ -2,10 +2,12 @@ import { React, useState, useEffect } from "react";
 import "./ChatBox.css";
 import Microphone from "./icons/Microphone";
 import AddImage from "./icons/AddImage";
+import { mockMessages } from "../data/mockMessages";
 
-const ChatBox = ({ user, messages }) => {
+const ChatBox = ({ user }) => {
   const [chat, setChat] = useState([]);
   const [text, setText] = useState("");
+  const messages = mockMessages;
 
   useEffect(() => {
     setChat(messages[user] || []);
