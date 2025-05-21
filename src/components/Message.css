@@ -1,0 +1,18 @@
+.message {
+  background: hsl(0, 0%, 20%);
+  display: flex;
+  padding: 20px;
+  border-radius: 7px;
+  max-width: 60%;
+  margin: 10px;
+}
+
+.message.me,
+.timestamp.me {
+  align-self: flex-end;
+}
+
+.message.other,
+timestamp.other {
+  align-self: flex-start;
+}

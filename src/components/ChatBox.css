@@ -32,23 +32,6 @@
   overflow-y: scroll;
 }
 
-.message {
-  background: hsl(0, 0%, 20%);
-  display: flex;
-  padding: 20px;
-  border-radius: 7px;
-  max-width: 60%;
-  margin: 10px;
-}
-
-.message.me {
-  align-self: flex-end;
-}
-
-.message.other {
-  align-self: flex-start;
-}
-
 .send-button {
   width: 5%;
   height: 40px;

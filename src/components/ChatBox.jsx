@@ -2,6 +2,7 @@ import { React, useState, useEffect } from "react";
 import "./ChatBox.css";
 import Microphone from "./icons/Microphone";
 import AddImage from "./icons/AddImage";
+import Message from "./Message";
 import { mockMessages } from "../data/mockMessages";
 
 const ChatBox = ({ user }) => {
@@ -28,6 +29,13 @@ const ChatBox = ({ user }) => {
     setText("");
   };
 
+  const formatDate = (stringDate) => {
+    const date = new Date(stringDate);
+    console.log(date);
+  };
+
+  formatDate("2025-01-24T10:00:00Z");
+
   return (
     <div id="chatbox-container">
       <div className="chatbox-header">
@@ -35,12 +43,7 @@ const ChatBox = ({ user }) => {
       </div>
       <div className="chatbox">
         {chat.map((msg, index) => (
-          <div
-            key={index}
-            className={msg.sender == "You" ? "message me" : "message other"}
-          >
-            {msg.text}
-          </div>
+          <Message key={index} msg={msg} />
         ))}
       </div>
       <div className="chatbox-footer">
