@@ -7,7 +7,7 @@ const LoginPage = () => {
   return (
     <div className="loginPage-wrapper">
       {action === "Login" ? (
-        <div className="form-box" id="login-container">
+        <div className="form-box" id="login-container" key="login">
           <form action="">
             <h1 className="login-title">Login</h1>
             <input
@@ -36,7 +36,7 @@ const LoginPage = () => {
           </form>
         </div>
       ) : (
-        <div className="form-box" id="signup-container">
+        <div className="form-box" id="signup-container" key="signup">
           <form action="">
             <h1 className="signup-title">Sign Up</h1>
             <input
