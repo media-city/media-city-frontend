@@ -17,9 +17,10 @@ const SideBar = ({ user }) => {
         <h3>{user[0].username} </h3>
         <a href="#">Edit</a>
       </div>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
+      <a href="#">Home</a>
+      <a href="#">Chat</a>
+      <a href="#">Short Video</a>
+      <a href="#">Shopping</a>
       <a href="#" className="logoutbtn">
         Logout
       </a>
