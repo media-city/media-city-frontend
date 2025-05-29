@@ -13,36 +13,38 @@ const ProfilePage = () => {
         </div>
         <div className="editinfo-container">
           <div className="title-header">Account Details</div>
-          <div>
-            <label htmlFor="username">
-              Username (how your name will appear to other users on the site)
-            </label>
-            <input type="text" id="uname" name="uname" />
-          </div>
-          <div>
-            <label htmlFor="fname">First name</label>
-            <input type="text" id="fname" name="fname" />
-          </div>
-          <div>
-            <label htmlFor="lname">Last name</label>
-            <input type="text" id="lname" name="lname" />
-          </div>
-          <div>
-            <label htmlFor="email">Email address</label>
-            <input type="text" id="email" name="email" />
-          </div>
-          <div>
-            <label htmlFor="phonenum">Phone number</label>
-            <input type="text" id="phonenum" name="phonenum" />
-          </div>
-          <div>
-            <label htmlFor="gender">Gender</label>
-            <input type="text" id="gender" name="gender" />
-          </div>
-          <div>
-            <label htmlFor="dataofbirth">Date of birth</label>
-            <input type="text" id="dataofbirth" name="dataofbirth" />
-          </div>
+          <form action="">
+            <div className="full-width">
+              <label htmlFor="username">
+                Username (how your name will appear to other users on the site)
+              </label>
+              <input type="text" id="uname" name="uname" />
+            </div>
+            <div className="half-width">
+              <label htmlFor="fname">First name</label>
+              <input type="text" id="fname" name="fname" />
+            </div>
+            <div className="half-width">
+              <label htmlFor="lname">Last name</label>
+              <input type="text" id="lname" name="lname" />
+            </div>
+            <div className="full-width">
+              <label htmlFor="email">Email address</label>
+              <input type="text" id="email" name="email" />
+            </div>
+            <div className="half-width">
+              <label htmlFor="phonenum">Phone number</label>
+              <input type="text" id="phonenum" name="phonenum" />
+            </div>
+            <div className="half-width">
+              <label htmlFor="dataofbirth">Date of birth</label>
+              <input type="text" id="dataofbirth" name="dataofbirth" />
+            </div>
+            <div className="half-width">
+              <label htmlFor="gender">Gender</label>
+              <input type="text" id="gender" name="gender" />
+            </div>
+          </form>
         </div>
       </div>
     </div>
