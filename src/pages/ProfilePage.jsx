@@ -9,7 +9,7 @@ const ProfilePage = () => {
           <div className="title-header">Profile Picture</div>
           <img className="profilepic" src="/bread.jpg" alt="" />
           <p>JPG or PNG no larger than 5 MB</p>
-          <button className="uploadimg-btn">Upload new image</button>
+          <button className="upload-img-btn">Upload new image</button>
         </div>
         <div className="editinfo-container">
           <div className="title-header">Account Details</div>
@@ -43,6 +43,11 @@ const ProfilePage = () => {
             <div className="half-width">
               <label htmlFor="gender">Gender</label>
               <input type="text" id="gender" name="gender" />
+            </div>
+            <div className="save-changes-btn-container">
+              <button className="save-changes-btn" type="submit">
+                Save changes
+              </button>
             </div>
           </form>
         </div>

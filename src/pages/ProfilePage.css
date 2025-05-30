@@ -34,10 +34,11 @@
   margin-bottom: 20px;
 }
 
-.uploadimg-btn {
+.upload-img-btn,
+.save-changes-btn {
   border: none;
   outline: none;
-  padding: 10px 30px 10px 30px;
+  padding: 10px 20px 10px 20px;
   border-radius: 7px;
   background: hsl(224 76% 70%);
   cursor: pointer;
@@ -46,13 +47,17 @@
   transition: 0.5s;
 }
 
+.save-changes-btn-container {
+  padding: 10px;
+}
+
 .uploadimg-btn:hover {
   background: hsl(224 76% 60%);
 }
 
 .editinfo-container {
   width: 800px;
-  height: 600px;
+  height: auto;
   background: hsl(0, 0%, 15%);
   color: white;
   display: flex;
@@ -73,16 +78,31 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  padding: 10px;
 }
 
 .half-width {
   width: 50%;
   display: inline-flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  padding: 10px;
 }
 
 .editinfo-container form {
-  padding: 20px;
+  padding: 10px;
+}
+
+.editinfo-container input {
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+  margin: 5px 0;
+  outline: none;
+  border: none;
+  width: 100%;
+  transition: box-shadow 0.2s;
+}
+
+.editinfo-container input:focus {
+  box-shadow: 0px 0px 0px 4px hsl(224 76% 70% / 90%);
 }
