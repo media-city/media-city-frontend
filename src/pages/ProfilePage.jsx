@@ -30,7 +30,7 @@ const ProfilePage = () => {
             </div>
             <div className="full-width">
               <label htmlFor="email">Email address</label>
-              <input type="text" id="email" name="email" />
+              <input type="email" id="email" name="email" />
             </div>
             <div className="half-width">
               <label htmlFor="phonenum">Phone number</label>
@@ -38,7 +38,7 @@ const ProfilePage = () => {
             </div>
             <div className="half-width">
               <label htmlFor="dataofbirth">Date of birth</label>
-              <input type="text" id="dataofbirth" name="dataofbirth" />
+              <input type="date" id="dataofbirth" name="dataofbirth" />
             </div>
             <div className="half-width">
               <label htmlFor="gender">Gender</label>
