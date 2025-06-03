@@ -1,0 +1,113 @@
+.profilePage-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.editprofile-container {
+  display: flex;
+  background: transparent;
+}
+
+.editpicture-container {
+  width: 450px;
+  height: 350px;
+  background: hsl(0, 0%, 15%);
+  color: white;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.editpicture-container .profilepic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+.editpicture-container p {
+  font-size: 14px;
+  opacity: 80%;
+  margin-bottom: 20px;
+}
+
+.upload-img-btn,
+.save-changes-btn {
+  border: none;
+  outline: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 7px;
+  background: hsl(224 76% 70%);
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.save-changes-btn-container {
+  padding: 10px;
+}
+
+.upload-img-btn:hover,
+.save-changes-btn:hover {
+  background: hsl(224 76% 60%);
+}
+
+.editinfo-container {
+  width: 800px;
+  height: auto;
+  background: hsl(0, 0%, 15%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-header {
+  height: 60px;
+  width: 100%;
+  background: hsl(0, 0%, 10%);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.full-width {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.half-width {
+  width: 50%;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.editinfo-container form {
+  padding: 10px;
+}
+
+.editinfo-container input {
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+  margin: 5px 0;
+  outline: none;
+  border: none;
+  width: 100%;
+  transition: box-shadow 0.2s;
+}
+
+.editinfo-container input:focus {
+  box-shadow: 0px 0px 0px 4px hsl(224 76% 70% / 90%);
+}
+
+#image-uploader {
+  display: none;
+}

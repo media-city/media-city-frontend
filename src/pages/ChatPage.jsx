@@ -15,7 +15,7 @@ const ChatPage = () => {
       <div id="chat-wrapper">
         <ChatList usersList={usersList} onSelectedUser={setSelectedUser} />
         <ChatBox user={selectedUser} />
-        <SideBar />
+        <SideBar user={usersList} />
       </div>
     </div>
   );

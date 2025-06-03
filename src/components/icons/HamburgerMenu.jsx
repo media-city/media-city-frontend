@@ -3,7 +3,8 @@ import "./HamburgerMenu.css";
 
 const HamburgerMenu = () => {
   function openSideBar() {
-    document.querySelector(".sidebar").style.transform = "translate(0)";
+    document.querySelector(".sidebar-container").style.transform =
+      "translate(0)";
   }
 
   return (
