@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ProfilePage.css";
 
 const ProfilePage = () => {
+  const [file, setFile] = useState(null);
+
+  useEffect(() => {
+    console.log(file);
+  }, [file]);
+
+  const handleFileChange = (e) => {
+    if (e.target.files[0]) {
+      setFile(e.target.files[0]);
+    }
+  };
   return (
     <div className="profilePage-wrapper">
       <div className="editprofile-container">
@@ -9,13 +20,21 @@ const ProfilePage = () => {
           <div className="title-header">Profile Picture</div>
           <img className="profilepic" src="/bread.jpg" alt="" />
           <p>JPG or PNG no larger than 5 MB</p>
-          <button className="upload-img-btn">Upload new image</button>
+          <label htmlFor="image-uploader" className="upload-img-btn">
+            Upload new image
+          </label>
+          <input
+            type="file"
+            accept="image/*"
+            id="image-uploader"
+            onChange={handleFileChange}
+          />
         </div>
         <div className="editinfo-container">
           <div className="title-header">Account Details</div>
           <form action="">
             <div className="full-width">
-              <label htmlFor="username">
+              <label htmlFor="uname">
                 Username (how your name will appear to other users on the site)
               </label>
               <input type="text" id="uname" name="uname" />

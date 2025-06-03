@@ -42,8 +42,8 @@ const LoginPage = () => {
             <input
               className="signup-inputs"
               type="text"
-              name="name"
-              placeholder="Name"
+              name="username"
+              placeholder="Username"
               required
             />
             <input

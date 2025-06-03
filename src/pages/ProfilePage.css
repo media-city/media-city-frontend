@@ -51,7 +51,8 @@
   padding: 10px;
 }
 
-.uploadimg-btn:hover {
+.upload-img-btn:hover,
+.save-changes-btn:hover {
   background: hsl(224 76% 60%);
 }
 
@@ -105,4 +106,8 @@
 
 .editinfo-container input:focus {
   box-shadow: 0px 0px 0px 4px hsl(224 76% 70% / 90%);
+}
+
+#image-uploader {
+  display: none;
 }

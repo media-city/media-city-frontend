@@ -50,7 +50,7 @@
   cursor: pointer;
 }
 
-button:hover {
+.loginPage-wrapper button:hover {
   background: hsl(224 76% 60%);
 }
 
