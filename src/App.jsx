@@ -6,17 +6,20 @@ import ChatPage from "./pages/ChatPage";
 import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/HomePage";
+import { UserContext, UserProvider } from "./contexts/UserContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<ChatPage />} />
-        <Route path="login" element={<LoginPage />} />
-        <Route path="profile" element={<ProfilePage />} />
-        <Route path="home" element={<HomePage />} />
-      </Routes>
-    </BrowserRouter>
+    <UserProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<ChatPage />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="profile" element={<ProfilePage />} />
+          <Route path="home" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
+    </UserProvider>
   );
 }
 
