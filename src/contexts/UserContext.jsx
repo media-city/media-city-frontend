@@ -1,7 +1,7 @@
-import { useState, useEffect, createContext } from "react";
-import { auth, db } from "../firebase/firebase";
-import { doc, getDoc } from "firebase/firestore";
+import { useState, useEffect, createContext, useContext } from "react";
+import { auth } from "../firebase/firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import LoadingIcon from "../components/LoadingIcon";
 
 export const UserContext = createContext();
 
@@ -12,10 +12,8 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
-        const docRef = doc(db, "Users", user.uid);
-        const docSnap = await getDoc(docRef);
-        setCurrentUser(docSnap.data());
-        console.log(docSnap.data());
+        setCurrentUser({ ...user });
+        console.log(user);
       } else {
         setCurrentUser(null);
         console.log("User is not logged in");
@@ -27,8 +25,16 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ currentUser }}>
-      {!loading && children}
+    <UserContext.Provider value={{ currentUser, loading }}>
+      {loading ? <LoadingIcon /> : children}
     </UserContext.Provider>
   );
+};
+
+export const useUser = () => {
+  const context = useContext(UserContext);
+  if (!context) {
+    throw new Error("useUser must be used within a UserProvider");
+  }
+  return context;
 };
