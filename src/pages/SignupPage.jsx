@@ -8,16 +8,28 @@ const SignupPage = () => {
   const [signupPassword, setSignupPassword] = useState("");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
+  const [uname, setUname] = useState("");
 
   return (
     <div className="signupPage-wrapper">
       <div className="form-box" id="signup-container" key="signup">
         <form
           onSubmit={(e) =>
-            handleSignup(e, fname, lname, signupEmail, signupPassword)
+            handleSignup(e, uname, fname, lname, signupEmail, signupPassword)
           }
         >
           <h1 className="signup-title">Sign Up</h1>
+          <input
+            className="signup-inputs"
+            type="text"
+            name="uname"
+            placeholder="Username (displayed name)"
+            value={uname}
+            onChange={(e) => {
+              setUname(e.target.value);
+            }}
+            required
+          />
           <input
             className="signup-inputs"
             type="text"

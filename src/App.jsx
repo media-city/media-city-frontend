@@ -6,7 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import ProfilePage from "./pages/ProfilePage";
 import LandingPage from "./pages/LandingPage";
-import { UserContext, UserProvider } from "./contexts/UserContext";
+import { UserProvider } from "./contexts/UserContext";
 
 function App() {
   return (

@@ -4,11 +4,14 @@ import {
   signOut,
 } from "firebase/auth";
 import { auth } from "../firebase/firebase";
+import { signupUser } from "../api/user/signup";
 
-export const handleSignup = async (e, email, password) => {
+export const handleSignup = async (e, uname, fname, lname, email, password) => {
   e.preventDefault();
   try {
     await createUserWithEmailAndPassword(auth, email, password);
+    const result = await signupUser(uname, fname, lname, email);
+    console.log(result);
     const user = auth.currentUser;
     console.log(user);
     console.log("User Registered Successfully!!");
